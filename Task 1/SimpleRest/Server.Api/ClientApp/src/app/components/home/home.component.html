@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-form-field class="example-full-width text-area">
+    <mat-label>Поле для ввода объекта</mat-label>
+    <textarea
+      [(ngModel)]="inputObject"
+      matInput
+      placeholder="Объект..."
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="10"
+    ></textarea>
+  </mat-form-field>
+  <button (click)="sendInput()" mat-raised-button color="accent">Отправить</button>
+  <div *ngIf="successMessage" class="check-container success">
+    <mat-icon class="completed">check_box</mat-icon>
+  </div>
+  <div *ngIf="errorMessage" class="check-container error">
+    <mat-icon class="completed">error</mat-icon>
+  </div>
+</div>

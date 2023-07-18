@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="index">
+    <th mat-header-cell *matHeaderCellDef>П/п</th>
+    <td mat-cell *matCellDef="let element; let i = index">{{ currentPage * currentRecordsPerPage + i + 1 }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Номер в таблице</th>
+    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef>Код</th>
+    <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="value">
+    <th mat-header-cell *matHeaderCellDef>Значение</th>
+    <td mat-cell *matCellDef="let element">{{ element.value }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<mat-paginator
+  [length]="recordsCount"
+  [pageSize]="currentRecordsPerPage"
+  [pageSizeOptions]="recordsPerPage"
+  [pageIndex]="currentPage"
+  aria-label="Select page"
+  (page)="handlePageEvent($event)"
+>
+</mat-paginator>

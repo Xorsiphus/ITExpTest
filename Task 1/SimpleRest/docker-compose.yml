@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  postgres:
+    build:
+        context: .
+        dockerfile: ./Dockerfile.db
+    ports:
+      - "5432:5432"
+  api:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: ./Server.Api/Dockerfile.backend
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+  client:
+    container_name: frontend
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Server.Api/ClientApp/Dockerfile.frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - api

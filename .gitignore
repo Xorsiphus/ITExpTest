@@ -3,5 +3,14 @@
 .vs/
 .vscode/
 
-/Task 1/SimpleRest/Server/bin
-/Task 1/SimpleRest/Server/obj
+/Task 1/SimpleRest/Server.Api/bin
+/Task 1/SimpleRest/Server.Api/obj
+
+/Task 1/SimpleRest/Server.Application/bin
+/Task 1/SimpleRest/Server.Application/obj
+
+/Task 1/SimpleRest/Server.Domain/bin
+/Task 1/SimpleRest/Server.Domain/obj
+
+/Task 1/SimpleRest/Server.Infrastructure/bin
+/Task 1/SimpleRest/Server.Infrastructure/obj

@@ -1,0 +1,15 @@
+.text-area {
+  width: 40%;
+}
+
+.check-container {
+  margin-top: 3em;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
