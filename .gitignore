@@ -1,0 +1,7 @@
+@node_modules/
+.idea/
+.vs/
+.vscode/
+
+/Task 1/SimpleRest/Server/bin
+/Task 1/SimpleRest/Server/obj
